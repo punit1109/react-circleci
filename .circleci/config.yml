@@ -23,8 +23,6 @@ jobs:
             - ~/.cache
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: npm lint
-
       - run: npm size
 
       - run: npm test
