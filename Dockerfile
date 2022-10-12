@@ -9,7 +9,8 @@ RUN echo $DIRECTORY
 # install application dependencies
 COPY package.json ./
 COPY package-lock.json ./
-COPY /home/circleci/demo/react-app /app/
+COPY ./* /app/
+RUN ls /app/
 RUN npm i
 # add app
 COPY . ./
