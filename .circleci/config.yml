@@ -17,7 +17,7 @@ jobs:
       - run: npm install
 
       - run:
-          name: Clone react repo
+          name: Clone react repo 
           command: |
             git clone https://github.com/punit1109/punit-private.git
             pwd
