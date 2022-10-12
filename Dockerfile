@@ -6,6 +6,7 @@ WORKDIR /app
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
 # install application dependencies
+RUN ls /home/circleci/demo/
 COPY package.json ./
 COPY package-lock.json ./
 COPY /home/circleci/demo/react-app /app/
