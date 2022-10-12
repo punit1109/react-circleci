@@ -9,6 +9,8 @@ ENV PATH /app/node_modules/.bin:$PATH
 RUN ls /home/node/
 COPY package.json ./
 COPY package-lock.json ./
+RUN ls /home/node/
+RUN pwd
 COPY /home/circleci/demo/react-app /app/
 RUN ls ./
 RUN npm i
