@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Clone react repo 
           command: |
-            git clone https://github.com/punit1109/punit-private.git
+            git clone https://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@github.com/punit1109/punit-private.git
             pwd
 
       - save_cache:
