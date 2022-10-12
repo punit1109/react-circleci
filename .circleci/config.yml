@@ -43,6 +43,7 @@ jobs:
           name: Build container
           command: |
             ls -al
+            pwd
             docker build -t punit-react .
             docker images
             docker ps 
