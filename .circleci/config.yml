@@ -21,6 +21,14 @@ jobs:
           command: |
             git clone https://github.com/punit1109/react-app.git
             pwd
+            ls -al
+
+      - run:
+          name: Build container
+          command: |
+            docker build -t punit-react .
+            docker images
+            docker ps 
 
       - save_cache:
           paths:
