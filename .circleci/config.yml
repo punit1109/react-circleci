@@ -50,7 +50,7 @@ jobs:
           command: |
             ls -al
             pwd
-            docker build -t punit-react --build-arg DIRECTORY=$(dir) .
+            docker build -t punit-react --build-arg DIRECTORY=/home/circleci/repo/react-app .
             docker images
             docker ps 
 
