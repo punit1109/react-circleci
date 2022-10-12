@@ -21,7 +21,7 @@ jobs:
           command: |
             git clone https://github.com/punit1109/react-app.git
             pwd
-            ls -al
+            ls -al react-app/
 
       - save_cache:
           paths:
