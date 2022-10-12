@@ -45,3 +45,10 @@ jobs:
             docker build -t punit-react .
             docker images
             docker ps 
+
+workflows:
+  version: 2
+  main_workflow:
+    jobs:
+      - build
+      - publish
