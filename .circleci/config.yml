@@ -20,9 +20,9 @@ jobs:
           name: Clone react repo
           command: |
             git clone https://github.com/punit1109/react-app.git
-            mkdir /demo
-            cp -r $(pwd)/react-app/ /demo
-            cd /demo
+            mkdir /home/demo
+            cp -r $(pwd)/react-app/ /home/demo
+            cd /home/demo/
             pwd
             ls -al 
             dir=$(pwd)
@@ -50,7 +50,7 @@ jobs:
           command: |
             ls -al
             pwd
-            docker build -t punit-react --build-arg DIRECTORY=/demo/react-app/ .
+            docker build -t punit-react --build-arg DIRECTORY=/home/demo/react-app/ .
             docker images
             docker ps 
 
