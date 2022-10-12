@@ -19,7 +19,9 @@ jobs:
       - run:
           name: Clone react repo
           command: |
+            ls /home/
             mkdir /home/circleci/demo
+            mkdir /home/node/demo
             cd /home/circleci/demo/
             git clone https://github.com/punit1109/react-app.git
             pwd
