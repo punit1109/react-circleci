@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: docker:17.05.0-ce-git
+      - image: circleci/node:12.9.1-browsers
 
     working_directory: ~/repo
 
@@ -23,13 +23,6 @@ jobs:
             pwd
             ls -al
 
-      - run:
-          name: Build container
-          command: |
-            docker build -t punit-react .
-            docker images
-            docker ps 
-
       - save_cache:
           paths:
             - node_modules
@@ -38,6 +31,17 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: npm test
-
-      - run: npm start
     
+  publish:
+    docker:
+      - image: cimg/python:3.9.0
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Build container
+          command: |
+            docker build -t punit-react .
+            docker images
+            docker ps 
