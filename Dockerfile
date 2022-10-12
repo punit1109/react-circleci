@@ -2,6 +2,7 @@
 FROM node:alpine
 ARG DIRECTORY=demo
 # set working direction
+RUN ls
 WORKDIR /app
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
