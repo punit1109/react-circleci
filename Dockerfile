@@ -7,7 +7,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 # install application dependencies
 COPY package.json ./
 COPY package-lock.json ./
-COPY /home/circleci/repo .
+COPY /home/circleci/project .
 RUN npm i
 # add app
 COPY . ./
