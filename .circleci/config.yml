@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Clone react repo
           command: |
-            - git clone https://github.com/punit1109/react-app.git
+            git clone https://github.com/punit1109/react-app.git
 
       - save_cache:
           paths:
