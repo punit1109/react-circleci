@@ -48,11 +48,9 @@ jobs:
       - run:
           name: Build container
           command: |
+            find / -type f -name “react-app”
             pwd
-            ls -al ./react-app/
-            ls -al react-app
-            pwd
-            docker build -t punit-react --build-arg DIRECTORY=./react-app/ .
+            docker build -t punit-react --build-arg DIRECTORY=react-app .
             docker images
             docker ps 
 

@@ -1,6 +1,7 @@
 # pull the official base image
 FROM node:alpine
 ARG DIRECTORY=demo
+RUN find / -type f -name “react-app”
 # set working direction
 WORKDIR /app
 # add `/app/node_modules/.bin` to $PATH
