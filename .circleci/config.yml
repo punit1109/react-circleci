@@ -23,7 +23,7 @@ jobs:
             mkdir /home/circleci/demo
             cd /home/circleci/demo/
             git clone https://github.com/punit1109/react-app.git
-            ls -al 
+            ls -al react-app
             dir=$(pwd)
             echo "$dir"
 
