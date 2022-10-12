@@ -5,13 +5,11 @@ ARG DIRECTORY=demo
 WORKDIR /app
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
-RUN ls ./
-RUN pwd
 RUN ls /home/circleci/demo/
 # install application dependencies
 COPY package.json ./
 COPY package-lock.json ./
-#COPY ./ /app/
+COPY /home/circleci/demo/react-app /app/
 RUN ls ./
 RUN npm i
 # add app
