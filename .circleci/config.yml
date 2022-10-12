@@ -25,6 +25,9 @@ jobs:
             cd /home/circleci/repo/react-app
             ls 
             pwd
+            dir=$(pwd)
+            echo "$dir"
+
 
       - save_cache:
           paths:
@@ -47,7 +50,7 @@ jobs:
           command: |
             ls -al
             pwd
-            docker build -t punit-react .
+            docker build -t punit-react --build-arg DIRECTORY=$(dir) .
             docker images
             docker ps 
 

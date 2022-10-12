@@ -1,5 +1,6 @@
 # pull the official base image
 FROM node:alpine
+ARG DIRECTORY=demo
 # set working direction
 WORKDIR /app
 # add `/app/node_modules/.bin` to $PATH
