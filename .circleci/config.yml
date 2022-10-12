@@ -21,8 +21,8 @@ jobs:
           command: |
             git clone https://github.com/punit1109/react-app.git
             mkdir /home/demo
-            cp -r $(pwd)/react-app/ /home/demo
-            cd /home/demo/
+            cp -r $(pwd)/react-app/ /home/circleci/demo
+            cd /home/circleci/demo/
             pwd
             ls -al 
             dir=$(pwd)
@@ -50,7 +50,7 @@ jobs:
           command: |
             ls -al
             pwd
-            docker build -t punit-react --build-arg DIRECTORY=/home/demo/react-app/ .
+            docker build -t punit-react --build-arg DIRECTORY=/home/circleci/demo/react-app/ .
             docker images
             docker ps 
 
