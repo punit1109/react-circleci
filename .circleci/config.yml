@@ -22,6 +22,9 @@ jobs:
             git clone https://github.com/punit1109/react-app.git
             pwd
             ls -al react-app/
+            cd /home/circleci/repo/react-app
+            ls 
+            pwd
 
       - save_cache:
           paths:
