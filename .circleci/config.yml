@@ -16,6 +16,11 @@ jobs:
             - v1-dependencies-
       - run: npm install
 
+      - run:
+          name: Clone react repo
+          command: |
+            - git clone https://github.com/punit1109/react-app.git
+
       - save_cache:
           paths:
             - node_modules
