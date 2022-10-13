@@ -11,7 +11,7 @@ COPY package-lock.json ./
 RUN ls -al 
 RUN pwd
 RUN mkdir ./app1 
-COPY ./react-app ./app1/
+COPY react-app ./app1/
 RUN  echo "-----------------------------------------------------------"
 RUN ls ./app1/
 RUN npm i
