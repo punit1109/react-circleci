@@ -19,7 +19,6 @@ jobs:
             cat ~/.ssh/id_rsa
             echo "breaker"
             cat /home/circleci/.ssh/id_rsa
-            ssh-add -v ~/.ssh/id_rsa
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
