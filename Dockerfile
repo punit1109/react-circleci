@@ -10,12 +10,12 @@ COPY package.json ./
 COPY package-lock.json ./
 RUN ls -al 
 RUN pwd
-RUN mkdir ./app1 
-COPY react-app ./app1/
+RUN mkdir ./app1
+COPY . ./
+RUN cp -r react-app ./app1/ 
 RUN  echo "-----------------------------------------------------------"
 RUN ls ./app1/
 RUN npm i
 # add app
-COPY . ./
 # start app
 CMD ["npm", "start"]
