@@ -45,6 +45,7 @@ jobs:
       - run:
           name: Clone react repo
           command: |
+            pwd
             ls /home/circleci/
             git clone https://github.com/punit1109/react-app.git
             ls -al 
@@ -54,6 +55,7 @@ jobs:
           name: Build container
           command: |
             pwd
+            ls -al 
             ls -al /home/circleci/
             docker build -t punit-react --build-arg DIRECTORY=react-app .
             docker images
