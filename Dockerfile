@@ -9,10 +9,9 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY package-lock.json ./
 RUN pwd
-COPY ./react-app/ ./app1/app2
+RUN mkdir app1 && ls react-app/
+COPY ./react-app/ ./app1/
 RUN  echo "-----------------------------------------------------------" 
-RUN ls react-app/app1
-RUN ls react-app/app1/app2
 RUN npm i
 # add app
 COPY . ./
