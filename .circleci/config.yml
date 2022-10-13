@@ -26,7 +26,7 @@ jobs:
             - v1-dependencies-
       - run: npm install
       - run:
-          name: Clone react repo 
+          name: Clone react repo
           command: |
             GIT_SSH_COMMAND='ssh -vv -i ~/.ssh/id_rsa'
             echo $GIT_SSH_COMMAND
