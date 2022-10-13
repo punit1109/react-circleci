@@ -27,7 +27,7 @@ jobs:
           name: Clone react repo 
           command: |
             GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_86:98:dc:4f:e9:80:67:8a:31:25:d6:45:a7:ce:93:4e'
-            git clone -v punitlakhwani11@gmail.com:punit1109/punit-private.git ~/punit-private
+            git clone --progress --verbose punitlakhwani11@gmail.com:punit1109/punit-private.git ~/punit-private
             pwd
       - restore_cache:
           keys:
