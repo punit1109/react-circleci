@@ -42,6 +42,15 @@ jobs:
       - checkout
       - setup_remote_docker:
           docker_layer_caching: true
+
+       - run:
+          name: Clone react repo
+          command: |
+            ls /home/circleci/
+            git clone https://github.com/punit1109/react-app.git
+            ls -al 
+            dir=$(pwd)
+            echo "$dir"
       - run:
           name: Build container
           command: |
