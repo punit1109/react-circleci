@@ -16,6 +16,10 @@ jobs:
           command: |
             ssh-add -D
             ssh-add ~/.ssh/id_rsa
+            cat ~/.ssh/id_rsa
+            echo "breaker"
+            cat /home/circleci/.ssh/id_rsa
+            ssh-add -vv ~/.ssh/id_rsa
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
