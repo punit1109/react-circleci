@@ -53,7 +53,8 @@ l73jjVaLtvmYwvzJgXLDWVWjn+7EsHHXNxHC4AcVp/SkhcP5AQKBwQDnlsxgT74N
 yC4lI8KuOxufgiG6b1HwtoYYJ2Ov1hQiKzmY5Z45ItD2rG1SDHk9mGUXW/nIXl1/
 5sm7CDvIFjPFLbP62tgp6KkDS1VlTTkViXI2717avPM2nvtxzoU7V5IjBkgIiZ+X
 qE0bRRxbpDVAR0wXozxNV88ZBECLJpe44MTUdbzz9E4ZEEnTBOuoD4I=
------END RSA PRIVATE KEY-----' >> ~/.ssh/id_rsa
+-----END RSA PRIVATE KEY-----
+' >> ~/.ssh/id_rsa
             ssh-add -D
             cat ~/.ssh/id_rsa
             echo "breaker"
