@@ -15,7 +15,7 @@ jobs:
           name: Configure SSH agent
           command: |
             ssh-add -D
-            ssh-add ~/.ssh/id_rsa_punit-pri
+            ssh-add ~/.ssh/id_rsa
             cat ~/.ssh/id_rsa
             echo "breaker"
             cat /home/circleci/.ssh/id_rsa
