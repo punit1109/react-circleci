@@ -22,12 +22,12 @@ jobs:
       #       cat /home/circleci/.ssh/id_rsa
       - add_ssh_keys:
           fingerprints:
-            - "86:98:dc:4f:e9:80:67:8a:31:25:d6:45:a7:ce:93:4e"
+            - "ef:f7:dc:39:d3:2e:f4:e3:92:72:17:f5:8e:0a:1d:05"
       - run:
           name: Clone react repo 
           command: |
-            GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_86:98:dc:4f:e9:80:67:8a:31:25:d6:45:a7:ce:93:4e'
-            git clone --progress --verbose punitlakhwani11@gmail.com:punit1109/punit-private.git ~/punit-private
+            GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_ef:f7:dc:39:d3:2e:f4:e3:92:72:17:f5:8e:0a:1d:05'
+            git clone --progress --verbose git@github.com:punit1109/punit-private.git ~/punit-private
             pwd
       - restore_cache:
           keys:
