@@ -11,6 +11,11 @@ jobs:
           fingerprints:
             - "51:17:f0:58:2f:eb:e7:2f:f6:7b:5a:3b:74:69:11:11"
       - checkout 
+      - run:
+          name: Configure SSH agent
+          command: |
+            ssh-add -D
+            ssh-add ~/.ssh/id_rsa
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
