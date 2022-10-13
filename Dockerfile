@@ -9,7 +9,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY package-lock.json ./
 RUN pwd
-COPY /home/circleci/repo/react-app/ ./
+COPY ./react-app/ ./
 RUN ls ./
 RUN npm i
 # add app
