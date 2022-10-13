@@ -8,7 +8,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 # install application dependencies
 COPY package.json ./
 COPY package-lock.json ./
-RUN ls -al ./app
+RUN ls -al 
 RUN pwd
 RUN mkdir ./app1 
 COPY ./react-app/ ./app1/
