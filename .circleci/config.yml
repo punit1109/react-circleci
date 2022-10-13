@@ -11,7 +11,7 @@ jobs:
 
       - add_ssh_keys:
           fingerprints:
-            - "51:17:f0:58:2f:eb:e7:2f:f6:7b:5a:3b:74:69:11:11" 
+            - "04:1f:0b:c0:4d:fd:48:58:e3:00:9f:bd:7a:db:ef:a5" 
       # - run:
       #     name: Configure SSH agent
       #     command: |
