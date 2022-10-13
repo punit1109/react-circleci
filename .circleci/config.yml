@@ -48,7 +48,7 @@ jobs:
           name: Build container
           command: |
             pwd
-            ls -al /home/circleci/
+            ls -al /home/circleci/project
             docker build -t punit-react --build-arg DIRECTORY=react-app .
             docker images
             docker ps 
