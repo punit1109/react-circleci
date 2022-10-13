@@ -15,15 +15,6 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       - run: npm install
-
-      # - run:
-      #     name: Clone react repo
-      #     command: |
-      #       ls /home/circleci/
-      #       git clone https://github.com/punit1109/react-app.git
-      #       ls -al 
-      #       dir=$(pwd)
-      #       echo "$dir"
  
 
       - save_cache:
