@@ -9,7 +9,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json ./
 COPY package-lock.json ./
 RUN pwd
-COPY ../demo/react-app/ ./
+COPY ../repo/react-app/ ./
 RUN ls ./
 RUN npm i
 # add app
