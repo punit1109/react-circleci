@@ -11,19 +11,17 @@ jobs:
           fingerprints:
             - "51:17:f0:58:2f:eb:e7:2f:f6:7b:5a:3b:74:69:11:11"
       - checkout 
-      - run:
-          name: Configure SSH agent
-          command: |
-            ssh-add -D
-            ssh-add ~/.ssh/id_rsa
-            cat ~/.ssh/id_rsa
-            echo "breaker"
-            cat /home/circleci/.ssh/id_rsa
+      # - run:
+      #     name: Configure SSH agent
+      #     command: |
+      #       ssh-add -D
+      #       ssh-add ~/.ssh/id_rsa
+      #       cat ~/.ssh/id_rsa
+      #       echo "breaker"
+      #       cat /home/circleci/.ssh/id_rsa
       - run:
           name: Clone react repo
           command: |
-            GIT_SSH_COMMAND='ssh -vv -i ~/.ssh/id_rsa'
-            echo $GIT_SSH_COMMAND
             git clone git@github.com:punit1109/punit-private.git
             pwd
       - restore_cache:
