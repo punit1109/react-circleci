@@ -15,9 +15,8 @@ jobs:
       - run: npm install
       - add_ssh_keys:
           fingerprints:
-            - "30:b1:40:36:1e:f4:b5:3d:d1:26:dd:a5:1d:b2:cc:52"
-      - checkout
-
+            - "51:17:f0:58:2f:eb:e7:2f:f6:7b:5a:3b:74:69:11:11"
+      - checkout 
       - run:
           name: Clone react repo 
           command: |
